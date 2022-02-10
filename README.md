@@ -1,4 +1,6 @@
 # Mongodb Cheatsheet
+MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc
+- [MongoDB](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_footprint_row_search_core_brand_atlas_desktop&utm_term=mongodb%20database&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624584&adgroup=115749713703)
 
 ## 1. Database Commands
 - View all databases
@@ -34,7 +36,7 @@ db.createCollection('testCollection')
 db.testCollection.drop()
 ```
 
-## 2.Row(Document) Commands
+## 3.Row(Document) Commands
 - Show all Rows in a Collection 
 ```
 db.testCollection.find()
@@ -49,7 +51,7 @@ db.testCollection.find().pretty()
 db.testCollection.findOne({name: 'Lushiv'})
 ```
 
-## Insert One Row
+- Insert One Row
 ```
 db.testCollection.insert({
     'name': 'lushiv',
@@ -58,7 +60,7 @@ db.testCollection.insert({
  })
 ```
 
-## Insert many Rows
+ Insert many Rows
   
   ```
   db.testCollection.insertMany([{
@@ -77,21 +79,21 @@ db.testCollection.insert({
 
   ```
 
-## Search in a MongoDb Database
+## 4.Search in a MongoDb Database
 ```
 db.testCollection.find({lang:'Python'})
 ```
-## Limit the number of rows in output
+## 5.Limit the number of rows in output
 ```
 db.testCollection.find().limit(2)
 ```
 
-## Count the number of rows in the output
+## 6.Count the number of rows in the output
 ```
 db.testCollection.find().count()
 ```
 
-## Update a row
+## 7.Update a row
 
 ```
 db.testCollection.update({name: 'Shubham'},
@@ -101,7 +103,7 @@ db.testCollection.update({name: 'Shubham'},
 }, {upsert: true})
 ```
 
-## Mongodb Increment Operator
+## 8.Mongodb Increment Operator
 ```
 db.testCollection.update({name: 'Rohan'},
 {$inc:{
@@ -110,7 +112,7 @@ db.testCollection.update({name: 'Rohan'},
 ```
 
 
-## Mongodb Rename Operator
+## 9.Mongodb Rename Operator
 ```
 db.testCollection.update({name: 'Rohan'},
 {$rename:{
@@ -118,12 +120,12 @@ db.testCollection.update({name: 'Rohan'},
 }})
 ```
 
-## Delete Row 
+## 10.Delete Row 
 ```
 db.testCollection.remove({name: 'lushiv'})
 ```
 
-## Less than/Greater than/ Less than or Eq/Greater than or Eq
+## 11.Less than/Greater than/ Less than or Eq/Greater than or Eq
 ```
 db.testCollection.find({member_since: {$lt: 90}})
 ```
